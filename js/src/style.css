@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme inline {
+  --color-primary: #3b73b9;
+  --color-navbar: #0c5174;
+  --color-bg: #394b59;
+  --color-primary-hover: #215db0;
+  --color-card: #30404d;
+  --color-text-1: #c9d1d9;
+  --color-text-2: #f6f7f9;
+  --color-link: #48aff0;
+  --shadow-inset-2: inset 0 0 0 1px #ffffff1a, 0 1px 2px #11141833;
+  --shadow-inset-1: inset 0 0 0 1px #11141833, 0 1px 2px #1114181a;
+  --shadow-inset-3:
+    0 0 #8abbff00, 0 0 #8abbff00, inset 0 0 0 1px #fff3,
+    inset 0 -1px 1px #ffffff4d;
+  --color-bg-foreground: #f6f7f9;
+  --shadow-1: 0 0 0 1px #1114181a, 0 1px 1px #11141833;
+  --shadow-card-1: 0 0 0 1px #10161a66, 0 0 #10161a00, 0 0 #10161a00;
+  --color-input: #1114184d;
+}
+
+body {
+  @apply bg-bg text-bg-foreground antialiased;
+  font-family: "Rubik Variable", sans-serif;
+}
