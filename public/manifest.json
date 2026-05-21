@@ -1,0 +1,35 @@
+{
+  "src/admin.ts": {
+    "file": "admin/admin.bundle.js",
+    "name": "admin",
+    "src": "src/admin.ts",
+    "isEntry": true
+  },
+  "src/assets/hero.png": {
+    "file": "assets/hero.png",
+    "src": "src/assets/hero.png"
+  },
+  "src/assets/vite.svg": {
+    "file": "assets/vite.svg",
+    "src": "src/assets/vite.svg"
+  },
+  "src/main.ts": {
+    "file": "js/main.js",
+    "name": "main",
+    "src": "src/main.ts",
+    "isEntry": true,
+    "css": [
+      "css/app.css"
+    ],
+    "assets": [
+      "assets/vite.svg",
+      "assets/hero.png"
+    ]
+  },
+  "src/overlay.ts": {
+    "file": "overlay/overlay.js",
+    "name": "overlay",
+    "src": "src/overlay.ts",
+    "isEntry": true
+  }
+}
