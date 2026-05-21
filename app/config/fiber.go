@@ -20,6 +20,7 @@ func FiberConfig(views embed.FS) fiber.Config {
 	}
 
 	engine := django.NewFileSystem(http.FS(sub), ".html")
+
 	engine.AddFunc("vite", func(path string) utils.ViteAssets {
 		if utils.GetEnv("SERVER_ENV") != "production" {
 			return utils.ViteAssets{

@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock title %}</title>
+    <!-- CSRF Token -->
     {% for css in vite("src/main.ts").CSS %}
       <link rel="stylesheet" crossorigin href="{{css}}" />
     {% endfor %}
+    <!-- initialize main -->
     <script src="{{vite("src/main.ts").JS}}" type="module"></script>
       {% block head %} {% endblock head %}
   </head>
