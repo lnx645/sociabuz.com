@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-@theme inline {
+:root {
   --color-primary: #3b73b9;
-  --color-navbar: #0c5174;
-  --color-bg: #394b59;
-  --color-primary-hover: #215db0;
-  --color-card: #30404d;
-  --color-text-1: #c9d1d9;
-  --color-text-2: #f6f7f9;
-  --color-link: #48aff0;
-  --shadow-inset-2: inset 0 0 0 1px #ffffff1a, 0 1px 2px #11141833;
-  --shadow-inset-1: inset 0 0 0 1px #11141833, 0 1px 2px #1114181a;
-  --shadow-inset-3:
-    0 0 #8abbff00, 0 0 #8abbff00, inset 0 0 0 1px #fff3,
-    inset 0 -1px 1px #ffffff4d;
-  --color-bg-foreground: #f6f7f9;
-  --shadow-1: 0 0 0 1px #1114181a, 0 1px 1px #11141833;
-  --shadow-card-1: 0 0 0 1px #10161a66, 0 0 #10161a00, 0 0 #10161a00;
-  --color-input: #1114184d;
+  --color-button-hover: #215db0;
+  --color-button-active: #184a90;
+  --shadow-elevation-1: 0 0 0 1px #11141826;
+  --color-bg: #f4f5f6;
+  --shadow-elevation-2: 0 0 0 1px #1114181a, 0 1px 1px #11141833;
+  --color-foreground: #1c2127;
+  --color-navbar-foreground: #fff;
+  --color-danger: #ac2f33;
+  --shadow-elevation-4: inset 0 0 0 1px #11141833, 0 1px 2px #1114181a;
+  --shadow-elevation-3: inset 0 0 0 1px #11141833, 0 1px 2px #11141833;
+  --color-card: #fff;
+  --shadow-elevation-inset-1:
+    0 0 #215db000, 0 0 #215db000, inset 0 0 0 1px #11141833,
+    inset 0 1px 1px #1114184d;
+  --color-navbar: #3b73b9;
+}
+@theme inline {
+  --color-button-active:var(--color-button-active);
+  --color-button-hover: var(--color-button-hover);
+  --shadow-elevation-4: var(--shadow-elevation-4);
+  --color-danger: var(--color-danger);
+  --color-card: var(--color-card);
+  --shadow-elevation-2: var(--shadow-elevation-2);
+  --color-foreground: var(--color-foreground);
+  --shadow-elevation-1: var(--shadow-elevation-1);
+  --color-primary: var(--color-primary);
+  --color-bg: var(--color-bg);
+  --shadow-elevation-3: var(--shadow-elevation-3);
+  --shadow-elevation-inset-1: var(--shadow-elevation-inset-1);
+  --color-navbar-foreground: var(--color-navbar-foreground);
+  --color-navbar: var(--color-navbar);
 }
 
 body {
-  @apply bg-bg text-bg-foreground antialiased;
+  @apply bg-bg text-foreground antialiased;
   font-family: "Rubik Variable", sans-serif;
 }
