@@ -10,6 +10,7 @@ import (
 
 	"sobuz.id/application/app/config"
 	"sobuz.id/application/app/infra"
+	"sobuz.id/application/app/utils"
 	"sobuz.id/application/routes"
 )
 
@@ -19,7 +20,11 @@ var viewsDIR embed.FS
 //go:embed public/*
 var publicDIR embed.FS
 
+//go:embed public/manifest.json
+var manifestFile embed.FS
+
 func main() {
+	utils.LoadManifest(manifestFile)
 	quit := make(chan os.Signal, 1)
 	//fiber config
 	config.InitAppConfig()

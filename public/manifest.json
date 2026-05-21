@@ -1,4 +1,28 @@
 {
+  "node_modules/@fontsource-variable/rubik/files/rubik-arabic-wght-normal.woff2": {
+    "file": "assets/rubik-arabic-wght-normal.woff2",
+    "src": "node_modules/@fontsource-variable/rubik/files/rubik-arabic-wght-normal.woff2"
+  },
+  "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-ext-wght-normal.woff2": {
+    "file": "assets/rubik-cyrillic-ext-wght-normal.woff2",
+    "src": "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-ext-wght-normal.woff2"
+  },
+  "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-wght-normal.woff2": {
+    "file": "assets/rubik-cyrillic-wght-normal.woff2",
+    "src": "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-wght-normal.woff2"
+  },
+  "node_modules/@fontsource-variable/rubik/files/rubik-hebrew-wght-normal.woff2": {
+    "file": "assets/rubik-hebrew-wght-normal.woff2",
+    "src": "node_modules/@fontsource-variable/rubik/files/rubik-hebrew-wght-normal.woff2"
+  },
+  "node_modules/@fontsource-variable/rubik/files/rubik-latin-ext-wght-normal.woff2": {
+    "file": "assets/rubik-latin-ext-wght-normal.woff2",
+    "src": "node_modules/@fontsource-variable/rubik/files/rubik-latin-ext-wght-normal.woff2"
+  },
+  "node_modules/@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2": {
+    "file": "assets/rubik-latin-wght-normal.woff2",
+    "src": "node_modules/@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2"
+  },
   "node_modules/sv-router/src/helpers/validate-routes.js": {
     "file": "assets/validate-routes-CgbRa8fT.js",
     "name": "validate-routes",
@@ -12,7 +36,7 @@
     "isEntry": true
   },
   "src/app/auth/login.svelte": {
-    "file": "assets/login-uch0gBC1.js",
+    "file": "assets/login-SIjzEYdK.js",
     "name": "login",
     "src": "src/app/auth/login.svelte",
     "isDynamicEntry": true,
@@ -30,9 +54,18 @@
     ]
   },
   "src/app/index.svelte": {
-    "file": "assets/app-DJzsNTkp.js",
+    "file": "assets/app-B1LojJpN.js",
     "name": "app",
     "src": "src/app/index.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/app/not-found.svelte": {
+    "file": "assets/not-found-C8mZ5uXB.js",
+    "name": "not-found",
+    "src": "src/app/not-found.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts"
@@ -47,10 +80,19 @@
       "node_modules/sv-router/src/helpers/validate-routes.js",
       "src/app/index.svelte",
       "src/app/auth/login.svelte",
-      "src/app/auth/register.svelte"
+      "src/app/auth/register.svelte",
+      "src/app/not-found.svelte"
     ],
     "css": [
       "css/app.css"
+    ],
+    "assets": [
+      "assets/rubik-arabic-wght-normal.woff2",
+      "assets/rubik-cyrillic-ext-wght-normal.woff2",
+      "assets/rubik-cyrillic-wght-normal.woff2",
+      "assets/rubik-hebrew-wght-normal.woff2",
+      "assets/rubik-latin-ext-wght-normal.woff2",
+      "assets/rubik-latin-wght-normal.woff2"
     ]
   },
   "src/overlay.ts": {

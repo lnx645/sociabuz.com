@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"os"
+	"embed"
 	"sync"
 
 	"github.com/goccy/go-json"
@@ -22,12 +22,11 @@ type ManifestEntry struct {
 
 var (
 	manifest map[string]ManifestEntry
-	once     sync.Once
 	mu       sync.RWMutex
 )
 
-func LoadManifest() {
-	data, err := os.ReadFile("public/manifest.json")
+func LoadManifest(manifestFile embed.FS) {
+	data, err := manifestFile.ReadFile("public/manifest.json")
 	if err != nil {
 		panic(err)
 	}
@@ -39,7 +38,6 @@ func LoadManifest() {
 
 func AssetsViteResolver(asset string) ViteAssets {
 
-	once.Do(LoadManifest)
 	mu.RLock()
 	entry, ok := manifest[asset]
 	defer mu.RUnlock()

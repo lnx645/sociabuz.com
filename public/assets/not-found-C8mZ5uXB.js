@@ -1,0 +1,1 @@
+import{i as e,o as t,u as n}from"../js/main.js";function r(r){n(),e(r,t(`Page Not found`))}export{r as default};

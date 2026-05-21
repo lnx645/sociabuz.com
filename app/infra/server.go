@@ -17,8 +17,9 @@ import (
 )
 
 type ServerConfig struct {
-	ViewsDir  embed.FS
-	PublicDir embed.FS
+	ViewsDir     embed.FS
+	PublicDir    embed.FS
+	ManifestFile embed.FS
 }
 
 type ServerApp struct {
