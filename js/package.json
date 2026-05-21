@@ -9,10 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
     "typescript": "~6.0.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.14"
   },
   "dependencies": {
-    "@types/node": "^25.9.1"
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/node": "^25.9.1",
+    "sv-router": "^0.16.2",
+    "svelte": "^5.55.9",
+    "tailwindcss": "^4.3.0"
   }
 }

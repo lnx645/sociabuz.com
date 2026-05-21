@@ -1,0 +1,1 @@
+import{a as e,c as t,i as n,n as r,o as i,r as a,s as o,t as s}from"../js/main.js";var c=e(`<a data-preload="">Login</a>`);function l(e,l){t(l,!1),r();var u=c();i(e=>a(u,`href`,e),[()=>s(`/login`)]),n(e,u),o()}export{l as default};

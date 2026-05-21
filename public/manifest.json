@@ -1,29 +1,56 @@
 {
+  "node_modules/sv-router/src/helpers/validate-routes.js": {
+    "file": "assets/validate-routes-CgbRa8fT.js",
+    "name": "validate-routes",
+    "src": "node_modules/sv-router/src/helpers/validate-routes.js",
+    "isDynamicEntry": true
+  },
   "src/admin.ts": {
     "file": "admin/admin.bundle.js",
     "name": "admin",
     "src": "src/admin.ts",
     "isEntry": true
   },
-  "src/assets/hero.png": {
-    "file": "assets/hero.png",
-    "src": "src/assets/hero.png"
+  "src/app/auth/login.svelte": {
+    "file": "assets/login-uch0gBC1.js",
+    "name": "login",
+    "src": "src/app/auth/login.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
   },
-  "src/assets/vite.svg": {
-    "file": "assets/vite.svg",
-    "src": "src/assets/vite.svg"
+  "src/app/auth/register.svelte": {
+    "file": "assets/register-DI1yZG_q.js",
+    "name": "register",
+    "src": "src/app/auth/register.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/app/index.svelte": {
+    "file": "assets/app-DJzsNTkp.js",
+    "name": "app",
+    "src": "src/app/index.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
   },
   "src/main.ts": {
     "file": "js/main.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
+    "dynamicImports": [
+      "node_modules/sv-router/src/helpers/validate-routes.js",
+      "src/app/index.svelte",
+      "src/app/auth/login.svelte",
+      "src/app/auth/register.svelte"
+    ],
     "css": [
       "css/app.css"
-    ],
-    "assets": [
-      "assets/vite.svg",
-      "assets/hero.png"
     ]
   },
   "src/overlay.ts": {

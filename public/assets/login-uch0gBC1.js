@@ -1,0 +1,1 @@
+import{a as e,i as t}from"../js/main.js";var n=e(`<div class="max-w-sm mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quia natus numquam veritatis facilis soluta vero, blanditiis sapiente optio nihil tenetur a quisquam iste unde maiores, fuga et eos porro.</div>`);function r(e){t(e,n())}export{r as default};
