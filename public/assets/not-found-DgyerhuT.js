@@ -1,1 +1,0 @@
-import{f as e,i as t,o as n}from"../js/mainmMcLuiwk.js";function r(r){e(),t(r,n(`Page Not found`))}export{r as default};

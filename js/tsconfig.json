@@ -1,24 +1,13 @@
 {
-  "compilerOptions": {
-    "target": "es2023",
-    "module": "esnext",
-    "lib": ["ES2023", "DOM"],
-    "types": ["vite/client"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.svelte"],
-  "exclude": ["node_modules"]
+	"extends": ["./.router/tsconfig.json"],
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "preserve",
+		"moduleResolution": "bundler",
+		"esModuleInterop": true,
+		"strict": true,
+		"noEmit": true,
+		"verbatimModuleSyntax": true,
+		"skipLibCheck": true
+	}
 }

@@ -5,68 +5,53 @@
     "src": "node_modules/sv-router/src/helpers/validate-routes.js",
     "isDynamicEntry": true
   },
-  "src/admin.ts": {
-    "file": "admin/admin.DpgBUqNP.js",
-    "name": "admin",
-    "src": "src/admin.ts",
-    "isEntry": true
-  },
-  "src/app/auth/login.svelte": {
-    "file": "assets/login-3u5THfHJ.js",
-    "name": "login",
-    "src": "src/app/auth/login.svelte",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/main.ts"
-    ]
-  },
-  "src/app/auth/register.svelte": {
-    "file": "assets/register-DNGu35cW.js",
-    "name": "register",
-    "src": "src/app/auth/register.svelte",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/main.ts"
-    ]
-  },
-  "src/app/index.svelte": {
-    "file": "assets/app-DmFwNavr.js",
-    "name": "app",
-    "src": "src/app/index.svelte",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/main.ts"
-    ]
-  },
-  "src/app/not-found.svelte": {
-    "file": "assets/not-found-DgyerhuT.js",
-    "name": "not-found",
-    "src": "src/app/not-found.svelte",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/main.ts"
-    ]
-  },
   "src/main.ts": {
-    "file": "js/mainmMcLuiwk.js",
+    "file": "js/mainBZRi9xW8.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
     "dynamicImports": [
       "node_modules/sv-router/src/helpers/validate-routes.js",
-      "src/app/index.svelte",
-      "src/app/auth/login.svelte",
-      "src/app/auth/register.svelte",
-      "src/app/not-found.svelte"
-    ],
-    "css": [
-      "css/app.css"
+      "src/routes/about.svelte",
+      "src/routes/auth/layout.svelte",
+      "src/routes/auth/login.svelte",
+      "src/routes/index.svelte"
     ]
   },
-  "src/overlay.ts": {
-    "file": "overlay/overlayDJTny1vo.js",
-    "name": "overlay",
-    "src": "src/overlay.ts",
-    "isEntry": true
+  "src/routes/about.svelte": {
+    "file": "assets/about-BaGJAhUN.js",
+    "name": "about",
+    "src": "src/routes/about.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/routes/auth/layout.svelte": {
+    "file": "assets/layout-CtUN5AJZ.js",
+    "name": "layout",
+    "src": "src/routes/auth/layout.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/routes/auth/login.svelte": {
+    "file": "assets/login-Di4uq0E1.js",
+    "name": "login",
+    "src": "src/routes/auth/login.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "assets/routes-RntDagok.js",
+    "name": "routes",
+    "src": "src/routes/index.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
   }
 }

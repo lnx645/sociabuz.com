@@ -1,17 +1,10 @@
-import path from "path";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
+import path from "node:path";
+import { router } from "sv-router/vite-plugin";
 import { defineConfig } from "vite";
-import tailwindcss from "@tailwindcss/vite";
-import { svelte, vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+
 export default defineConfig({
-  server:{
-    cors:true,
-  },
-  plugins: [
-    tailwindcss(),
-    svelte({
-      preprocess: vitePreprocess(),
-    }),
-  ],
+  plugins: [svelte(), router({allLazy:true})],
   build: {
     outDir: "../public",
     manifest: "manifest.json",
@@ -19,8 +12,8 @@ export default defineConfig({
     rolldownOptions: {
       input: {
         main: path.resolve(__dirname, "src/main.ts"),
-        admin: path.resolve(__dirname, "src/admin.ts"),
-        overlay: path.resolve(__dirname, "src/overlay.ts"),
+        // admin: path.resolve(__dirname, "src/admin.ts"),
+        // overlay: path.resolve(__dirname, "src/overlay.ts"),
       },
       output: {
         entryFileNames: (chunkInfo: any) => {
