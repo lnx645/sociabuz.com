@@ -1,0 +1,1 @@
+import{n as e,r as t}from"../js/mainrgPaoS5c.js";var n=t(`<h2>login</h2>`);function r(t){e(t,n())}export{r as default};

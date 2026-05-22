@@ -4,6 +4,7 @@ go 1.26.1
 
 require (
 	github.com/andybalholm/brotli v1.2.1 // indirect
+	github.com/common-nighthawk/go-figure v0.0.0-20210622060536-734e95fb86be // indirect
 	github.com/flosch/pongo2/v6 v6.1.0 // indirect
 	github.com/goccy/go-json v0.10.6 // indirect
 	github.com/gofiber/fiber/v3 v3.2.0 // indirect

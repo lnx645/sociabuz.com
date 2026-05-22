@@ -7,7 +7,7 @@ import (
 
 	json "github.com/goccy/go-json"
 	"github.com/gofiber/fiber/v3"
-	"github.com/gofiber/template/django/v4"
+	"github.com/gofiber/template/html/v3"
 	"sobuz.id/application/app/utils"
 )
 
@@ -19,17 +19,9 @@ func FiberConfig(views embed.FS) fiber.Config {
 		panic("Failed to embed views folder: " + err.Error())
 	}
 
-	engine := django.NewFileSystem(http.FS(sub), ".html")
+	engine := html.NewFileSystem(http.FS(sub), ".html")
+	engine.AddFunc("vite_render", utils.RenderViteSource)
 
-	engine.AddFunc("vite", func(path string) utils.ViteAssets {
-		if utils.GetEnv("SERVER_ENV") != "production" {
-			return utils.ViteAssets{
-				JS:  utils.GetEnv("VITE_URL") + "/" + path,
-				CSS: nil,
-			}
-		}
-		return utils.AssetsViteResolver(path)
-	})
 	return fiber.Config{
 		Views:         engine,
 		JSONEncoder:   json.Marshal,

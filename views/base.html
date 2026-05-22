@@ -2,17 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
-    <title>{% block title %}{% endblock title %}</title>
-    <!-- CSRF Token -->
-    {% for css in vite("src/main.ts").CSS %}
-      <link rel="stylesheet" crossorigin href="/{{css}}?v2" />
-    {% endfor %}
-    <!-- initialize main -->
-    <script src="/{{vite("src/main.ts").JS}}?v3" type="module"></script>
-      {% block head %} {% endblock head %}
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable=no"
+    />
+    {{ .ViteRender }}
+    <title>WKWKW</title>
   </head>
   <body>
-    {% block content %}{% endblock content %} 
+    <div id="app"></div>
   </body>
 </html>

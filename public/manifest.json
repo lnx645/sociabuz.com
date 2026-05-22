@@ -6,7 +6,7 @@
     "isDynamicEntry": true
   },
   "src/main.ts": {
-    "file": "js/mainBZRi9xW8.js",
+    "file": "js/mainrgPaoS5c.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
@@ -16,10 +16,13 @@
       "src/routes/auth/layout.svelte",
       "src/routes/auth/login.svelte",
       "src/routes/index.svelte"
+    ],
+    "css": [
+      "css/app.css"
     ]
   },
   "src/routes/about.svelte": {
-    "file": "assets/about-BaGJAhUN.js",
+    "file": "assets/about-DQfNA7wQ.js",
     "name": "about",
     "src": "src/routes/about.svelte",
     "isDynamicEntry": true,
@@ -28,7 +31,7 @@
     ]
   },
   "src/routes/auth/layout.svelte": {
-    "file": "assets/layout-CtUN5AJZ.js",
+    "file": "assets/layout-DuvGqLZ6.js",
     "name": "layout",
     "src": "src/routes/auth/layout.svelte",
     "isDynamicEntry": true,
@@ -37,7 +40,7 @@
     ]
   },
   "src/routes/auth/login.svelte": {
-    "file": "assets/login-Di4uq0E1.js",
+    "file": "assets/login-B3kflenj.js",
     "name": "login",
     "src": "src/routes/auth/login.svelte",
     "isDynamicEntry": true,
@@ -46,7 +49,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "assets/routes-RntDagok.js",
+    "file": "assets/routes-C4zYH3Kp.js",
     "name": "routes",
     "src": "src/routes/index.svelte",
     "isDynamicEntry": true,

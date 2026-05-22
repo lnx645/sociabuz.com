@@ -1,10 +1,17 @@
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { svelte, vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import path from "node:path";
 import { router } from "sv-router/vite-plugin";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [svelte(), router({allLazy:true})],
+  plugins: [svelte({
+    preprocess:vitePreprocess()
+  }), router({allLazy:true})],
+  resolve : {
+    alias : {
+      "@" : path.resolve(__dirname,"src")
+    }
+  },
   build: {
     outDir: "../public",
     manifest: "manifest.json",

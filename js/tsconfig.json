@@ -1,13 +1,27 @@
 {
-	"extends": ["./.router/tsconfig.json"],
-	"compilerOptions": {
-		"target": "ES2020",
-		"module": "preserve",
-		"moduleResolution": "bundler",
-		"esModuleInterop": true,
-		"strict": true,
-		"noEmit": true,
-		"verbatimModuleSyntax": true,
-		"skipLibCheck": true
-	}
+  "extends": ["./.router/tsconfig.json"],
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "sv-router/generated": ["./.router/router.ts"]
+    }
+  },
+  "include": [
+    "./src/**/*.js",
+    "./src/**/*.ts",
+    "./src/**/*.css",
+    "./src/**/*.svelte",
+    "./tests/**/*.js",
+    "./tests/**/*.ts",
+    "./tests/**/*.svelte",
+    "./.router/router.ts"
+  ]
 }

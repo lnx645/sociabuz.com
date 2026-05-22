@@ -1,1 +1,0 @@
-import{n as e,r as t}from"../js/mainBZRi9xW8.js";var n=t(`<h2>login</h2>`);function r(t){e(t,n())}export{r as default};
