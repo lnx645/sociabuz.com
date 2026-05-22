@@ -34,7 +34,9 @@ func InitHTTPServer(cfg *ServerConfig) ServerApp {
 	})
 	//fiber configuration
 	app := fiber.New(fiberCfg)
-	app.Use(cors.New())
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: []string{"*"},
+	}))
 	app.Use(requestid.New())
 	app.Use(logger.New())
 	app.Use(helmet.New())

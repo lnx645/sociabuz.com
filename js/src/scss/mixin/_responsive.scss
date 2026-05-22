@@ -1,0 +1,40 @@
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+// 2. Mixin untuk Media Queries (Mobile-First / min-width)
+@mixin responsive($breakpoint) {
+  // Cek apakah parameter ada di dalam map $breakpoints
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    // Jika tidak ada, kembalikan warning dan gunakan nilai mentah (custom pixel)
+    @warn "Breakpoint '#{$breakpoint}' tidak ditemukan. Menggunakan nilai mentah.";
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Opsional: Mixin untuk max-width (Desktop-First)
+@mixin respond-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint) - 0.02px; // Hindari bentrok di pixel yang sama
+    
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}

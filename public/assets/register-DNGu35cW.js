@@ -1,0 +1,1 @@
+import{a as e,i as t}from"../js/mainmMcLuiwk.js";var n=e(`<h2>Register</h2>`);function r(e){t(e,n())}export{r as default};

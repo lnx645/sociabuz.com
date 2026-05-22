@@ -1,4 +1,3 @@
-@import "tailwindcss";
 
 :root {
   --color-primary: #3b73b9;
@@ -17,25 +16,4 @@
     0 0 #215db000, 0 0 #215db000, inset 0 0 0 1px #11141833,
     inset 0 1px 1px #1114184d;
   --color-navbar: #3b73b9;
-}
-@theme inline {
-  --color-button-active:var(--color-button-active);
-  --color-button-hover: var(--color-button-hover);
-  --shadow-elevation-4: var(--shadow-elevation-4);
-  --color-danger: var(--color-danger);
-  --color-card: var(--color-card);
-  --shadow-elevation-2: var(--shadow-elevation-2);
-  --color-foreground: var(--color-foreground);
-  --shadow-elevation-1: var(--shadow-elevation-1);
-  --color-primary: var(--color-primary);
-  --color-bg: var(--color-bg);
-  --shadow-elevation-3: var(--shadow-elevation-3);
-  --shadow-elevation-inset-1: var(--shadow-elevation-inset-1);
-  --color-navbar-foreground: var(--color-navbar-foreground);
-  --color-navbar: var(--color-navbar);
-}
-
-body {
-  @apply bg-bg text-foreground antialiased;
-  font-family: "Rubik Variable", sans-serif;
 }

@@ -1,0 +1,1 @@
+import{a as e,d as t,i as n,n as r,r as i,s as a,t as o,u as s}from"../js/mainmMcLuiwk.js";var c=e(`<a data-preload="">Login</a>`);function l(e,l){t(l,!1),r();var u=c();a(e=>i(u,`href`,e),[()=>o(`/login`)]),n(e,u),s()}export{l as default};

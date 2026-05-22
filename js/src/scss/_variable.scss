@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --color-button-hover: #215db0;
+  --color-button-active: #184a90;
+  --shadow-elevation-1: 0 0 0 1px #11141826;
+  --shadow-elevation-2: 0 0 0 1px #1114181a, 0 1px 1px #11141833;
+  --color-foreground: #1c2127;
+  --color-navbar-foreground: #fff;
+  --color-danger: #ac2f33;
+  --shadow-elevation-4: inset 0 0 0 1px #11141833, 0 1px 2px #1114181a;
+  --shadow-elevation-3: inset 0 0 0 1px #11141833, 0 1px 2px #11141833;
+  --color-card: #fff;
+  --shadow-elevation-inset-1:
+    0 0 #215db000, 0 0 #215db000, inset 0 0 0 1px #11141833,
+    inset 0 1px 1px #1114184d;
+  --color-navbar: #3b73b9;
+
+  --color-text-var: #8c8c8c;
+
+  --color-border-1: #e0e0e0;
+}
+
+:root {
+  --color-overlay-background: rgba(25, 25, 25, 0.3);
+  --color-text: #d4d4d4;
+  --color-text-var: #8c8c8c;
+  --color-text-on-bg: #e5e2e1;
+  --color-bg: #191919;
+  //outline
+  --color-outline: #333;
+  --color-outline-var: #262626;
+  --color-outline-accent: #87a9ff;
+  //surface
+  --color-surface-container-high: #252525;
+  --color-text-on-button: #fcfcfc;
+  --color-surface-container-highest: #2a2a2a;
+  --color-surface-container: #1f1f1f;
+  --color-surface: #191919;
+  --shadow-md:
+    0 4px 6px -1px rgba(10, 13, 18, 0.1), 0 2px 4px -2px rgba(10, 13, 18, 0.06);
+  --shadow-lg:
+    0 12px 16px -4px rgba(10, 13, 18, 0.08),
+    0 4px 6px -2px rgba(10, 13, 18, 0.03), 0 2px 2px -1px rgba(10, 13, 18, 0.04);
+  --shadow-xl:
+    0 20px 24px -4px rgba(10, 13, 18, 0.08),
+    0 8px 8px -4px rgba(10, 13, 18, 0.03),
+    0 3px 3px -1.5px rgba(10, 13, 18, 0.04);
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm:
+    0 1px 3px 0 rgba(10, 13, 18, 0.1), 0 1px 2px -1px rgba(10, 13, 18, 0.1);
+  --color-on-secondary: #003257;
+  --color-secondary: var(--color-text);
+  --color-primary:#00497b;
+  --color-hover:#323232;
+}

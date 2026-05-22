@@ -1,12 +1,21 @@
 import path from "path";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { svelte, vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 export default defineConfig({
-  plugins: [tailwindcss(), svelte()],
+  server:{
+    cors:true,
+  },
+  plugins: [
+    tailwindcss(),
+    svelte({
+      preprocess: vitePreprocess(),
+    }),
+  ],
   build: {
     outDir: "../public",
     manifest: "manifest.json",
+    emptyOutDir: true,
     rolldownOptions: {
       input: {
         main: path.resolve(__dirname, "src/main.ts"),
@@ -16,15 +25,15 @@ export default defineConfig({
       output: {
         entryFileNames: (chunkInfo: any) => {
           if (chunkInfo.name === "main") {
-            return "js/main.js";
+            return "js/main[hash].js";
           }
 
           if (chunkInfo.name === "admin") {
-            return "admin/admin.bundle.js";
+            return "admin/admin.[hash].js";
           }
 
           if (chunkInfo.name === "overlay") {
-            return "overlay/overlay.js";
+            return "overlay/overlay[hash].js";
           }
 
           return "js/[name].js";

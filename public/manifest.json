@@ -1,28 +1,4 @@
 {
-  "node_modules/@fontsource-variable/rubik/files/rubik-arabic-wght-normal.woff2": {
-    "file": "assets/rubik-arabic-wght-normal.woff2",
-    "src": "node_modules/@fontsource-variable/rubik/files/rubik-arabic-wght-normal.woff2"
-  },
-  "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-ext-wght-normal.woff2": {
-    "file": "assets/rubik-cyrillic-ext-wght-normal.woff2",
-    "src": "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-ext-wght-normal.woff2"
-  },
-  "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-wght-normal.woff2": {
-    "file": "assets/rubik-cyrillic-wght-normal.woff2",
-    "src": "node_modules/@fontsource-variable/rubik/files/rubik-cyrillic-wght-normal.woff2"
-  },
-  "node_modules/@fontsource-variable/rubik/files/rubik-hebrew-wght-normal.woff2": {
-    "file": "assets/rubik-hebrew-wght-normal.woff2",
-    "src": "node_modules/@fontsource-variable/rubik/files/rubik-hebrew-wght-normal.woff2"
-  },
-  "node_modules/@fontsource-variable/rubik/files/rubik-latin-ext-wght-normal.woff2": {
-    "file": "assets/rubik-latin-ext-wght-normal.woff2",
-    "src": "node_modules/@fontsource-variable/rubik/files/rubik-latin-ext-wght-normal.woff2"
-  },
-  "node_modules/@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2": {
-    "file": "assets/rubik-latin-wght-normal.woff2",
-    "src": "node_modules/@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2"
-  },
   "node_modules/sv-router/src/helpers/validate-routes.js": {
     "file": "assets/validate-routes-CgbRa8fT.js",
     "name": "validate-routes",
@@ -30,13 +6,13 @@
     "isDynamicEntry": true
   },
   "src/admin.ts": {
-    "file": "admin/admin.bundle.js",
+    "file": "admin/admin.DpgBUqNP.js",
     "name": "admin",
     "src": "src/admin.ts",
     "isEntry": true
   },
   "src/app/auth/login.svelte": {
-    "file": "assets/login-SIjzEYdK.js",
+    "file": "assets/login-3u5THfHJ.js",
     "name": "login",
     "src": "src/app/auth/login.svelte",
     "isDynamicEntry": true,
@@ -45,7 +21,7 @@
     ]
   },
   "src/app/auth/register.svelte": {
-    "file": "assets/register-DI1yZG_q.js",
+    "file": "assets/register-DNGu35cW.js",
     "name": "register",
     "src": "src/app/auth/register.svelte",
     "isDynamicEntry": true,
@@ -54,7 +30,7 @@
     ]
   },
   "src/app/index.svelte": {
-    "file": "assets/app-B1LojJpN.js",
+    "file": "assets/app-DmFwNavr.js",
     "name": "app",
     "src": "src/app/index.svelte",
     "isDynamicEntry": true,
@@ -63,7 +39,7 @@
     ]
   },
   "src/app/not-found.svelte": {
-    "file": "assets/not-found-C8mZ5uXB.js",
+    "file": "assets/not-found-DgyerhuT.js",
     "name": "not-found",
     "src": "src/app/not-found.svelte",
     "isDynamicEntry": true,
@@ -72,7 +48,7 @@
     ]
   },
   "src/main.ts": {
-    "file": "js/main.js",
+    "file": "js/mainmMcLuiwk.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
@@ -85,18 +61,10 @@
     ],
     "css": [
       "css/app.css"
-    ],
-    "assets": [
-      "assets/rubik-arabic-wght-normal.woff2",
-      "assets/rubik-cyrillic-ext-wght-normal.woff2",
-      "assets/rubik-cyrillic-wght-normal.woff2",
-      "assets/rubik-hebrew-wght-normal.woff2",
-      "assets/rubik-latin-ext-wght-normal.woff2",
-      "assets/rubik-latin-wght-normal.woff2"
     ]
   },
   "src/overlay.ts": {
-    "file": "overlay/overlay.js",
+    "file": "overlay/overlayDJTny1vo.js",
     "name": "overlay",
     "src": "src/overlay.ts",
     "isEntry": true

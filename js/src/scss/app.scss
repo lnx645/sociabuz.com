@@ -1,0 +1,16 @@
+@use "variable";
+@use "reset";
+@use "navbar";
+@use "button";
+@use "auth";
+//body
+body {
+  background: var(--color-surface);
+  color: var(--color-text-on-bg);
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
