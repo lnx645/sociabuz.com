@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.1.2",
-    "sass": "^1.100.0",
     "typescript": "~6.0.2",
     "vite": "^8.0.14"
   },
