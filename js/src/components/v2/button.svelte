@@ -14,11 +14,12 @@
     background: "none",
     border: "none", // Hilangin border default
     height: 42,
+    MozBoxSizing:"border-box",
     padding: "0 16px",
+    display:"inline-flex",
     color: "white",
     position: "relative",
     boxSizing: "border-box",
-    display: "inline-flex",
     alignItems: "center",
     justifyContent: "center",
     cursor: "pointer",
@@ -34,7 +35,7 @@
     transform: "translateZ(0)",
     borderWidth: 1,
     borderStyle: "solid",
-
+    
     borderColor: "transparent",
     WebkitFontSmoothing: "antialiased",
     MozOsxFontSmoothing: "grayscale",

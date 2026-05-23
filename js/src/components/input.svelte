@@ -8,10 +8,12 @@
     name: string;
     id: string;
     label: string;
+    isError: boolean;
   };
 
   let {
     label,
+    isError = false,
     id = useId(),
     value = $bindable(),
     name,
@@ -52,7 +54,7 @@
     height: "100%",
     display: "flex",
     paddingInline: 5,
-    paddingLeft:6,
+    paddingLeft: 6,
     alignItems: "center",
     justifyContent: "center",
     "&>svg": {
@@ -69,33 +71,32 @@
     background: "transparent",
     color: "#525252",
     boxSizing: "border-box",
-        fontSize: "0.98rem",
-
+    fontSize: "0.98rem",
     outline: "none",
     border: "none",
     "::placeholder": {
-      color: "rgb(188, 188, 188)",
+      color: "#525252",
     },
     flex: 1,
   });
   const labelStyle = css({
     fontSize: 12,
     fontWeight: 600,
-    color:"#AFAFAF"
+    color: "#525252",
   });
   const fieldStyle = css({
     lineHeight: 1.5,
   });
   const errorStyle = css({
-    color:'#ea2b2b',
-    fontWeight:600,
-    gap:2,
-    fontSize:13,
-    marginTop:3,
-    display:"flex",
-    alignItems:'center',
-    justifyContent:"start"
-  })
+    color: "#ea2b2b",
+    fontWeight: 600,
+    gap: 2,
+    fontSize: 13,
+    marginTop: 3,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "start",
+  });
 </script>
 
 <div class={fieldStyle}>
@@ -108,8 +109,17 @@
     </div>
     <input bind:value type="text" {name} class={inputStyle} {id} {...props} />
   </div>
-  <div class={errorStyle}>
-  <svg height="16" preserveAspectRatio="xMidYMin slice" width="16" class="_1Tx0r" style="color: rgb(var(--color-fire-ant)); overflow: visible;" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8V13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V8ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="currentcolor"></path></svg>
-    <span>  Kata sandi terlalu pendek</span>
-  </div>
+  {#if isError}
+    <div class={errorStyle}>
+      <svg height="16" width="16" viewBox="0 0 24 24"
+        ><path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8V13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V8ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z"
+          fill="currentcolor"
+        ></path></svg
+      >
+      <span> Kata sandi terlalu pendek</span>
+    </div>
+  {/if}
 </div>
