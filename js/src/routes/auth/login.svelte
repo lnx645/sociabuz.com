@@ -13,6 +13,11 @@
   })}
 >
   <Input placeholder="Masukan nama anda" name="password" label="Email" />
-  <Input placeholder="Masukan nama anda" name="email" label="Password" />
+  <Input
+    type="password"
+    placeholder="Masukan nama anda"
+    name="email"
+    label="Password"
+  />
   <Button id="login">Login</Button>
 </div>
