@@ -4,6 +4,7 @@
   let { children } = $props();
   injectGlobal({
     body: {
+      WebkitTapHighlightColor:"transparent",
       padding: 0,
       fontFamily: `"Quicksand", sans-serif`,
       fontOpticalSizing: "auto",

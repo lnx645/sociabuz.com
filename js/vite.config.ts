@@ -4,6 +4,9 @@ import { router } from "sv-router/vite-plugin";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  server : {
+    cors:true
+  },
   plugins: [svelte({
     preprocess:vitePreprocess()
   }), router({allLazy:true})],

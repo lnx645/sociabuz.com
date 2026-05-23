@@ -1,4 +1,8 @@
 {
+  "_emotion-css.esm-BsYPW9Xy.js": {
+    "file": "assets/emotion-css.esm-BsYPW9Xy.js",
+    "name": "emotion-css.esm"
+  },
   "node_modules/sv-router/src/helpers/validate-routes.js": {
     "file": "assets/validate-routes-CgbRa8fT.js",
     "name": "validate-routes",
@@ -6,7 +10,7 @@
     "isDynamicEntry": true
   },
   "src/main.ts": {
-    "file": "js/mainrgPaoS5c.js",
+    "file": "js/mainDma9VV7j.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
@@ -15,14 +19,15 @@
       "src/routes/about.svelte",
       "src/routes/auth/layout.svelte",
       "src/routes/auth/login.svelte",
-      "src/routes/index.svelte"
+      "src/routes/index.svelte",
+      "src/routes/layout.svelte"
     ],
     "css": [
       "css/app.css"
     ]
   },
   "src/routes/about.svelte": {
-    "file": "assets/about-DQfNA7wQ.js",
+    "file": "assets/about-agx0vU9s.js",
     "name": "about",
     "src": "src/routes/about.svelte",
     "isDynamicEntry": true,
@@ -31,7 +36,7 @@
     ]
   },
   "src/routes/auth/layout.svelte": {
-    "file": "assets/layout-DuvGqLZ6.js",
+    "file": "assets/layout-DpPKiquL.js",
     "name": "layout",
     "src": "src/routes/auth/layout.svelte",
     "isDynamicEntry": true,
@@ -40,21 +45,32 @@
     ]
   },
   "src/routes/auth/login.svelte": {
-    "file": "assets/login-B3kflenj.js",
+    "file": "assets/login-BbJ9ifZ8.js",
     "name": "login",
     "src": "src/routes/auth/login.svelte",
     "isDynamicEntry": true,
     "imports": [
-      "src/main.ts"
+      "src/main.ts",
+      "_emotion-css.esm-BsYPW9Xy.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "assets/routes-C4zYH3Kp.js",
+    "file": "assets/routes-D0F1IYiQ.js",
     "name": "routes",
     "src": "src/routes/index.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts"
+    ]
+  },
+  "src/routes/layout.svelte": {
+    "file": "assets/layout-cYwxSSUf.js",
+    "name": "layout",
+    "src": "src/routes/layout.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts",
+      "_emotion-css.esm-BsYPW9Xy.js"
     ]
   }
 }

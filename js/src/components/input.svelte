@@ -20,37 +20,39 @@
 
   const style = css({
     width: "100%",
-    height: "35px",
+
     boxSizing: "border-box",
-    borderColor: "rgb(188, 188, 188)",
-    borderWidth: 1,
+    borderColor: "#e5e5e5",
+    borderWidth: 2,
     borderStyle: "solid",
     outline: "none",
     boxShadow: "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset",
     transition: "0.5s ease",
-    background: "#f8f9f9",
+    background: "#f7f7f7",
     display: "flex",
     alignItems: "center",
-    fontSize: 12,
-    borderRadius: 7,
+    borderRadius: 12,
+    caretColor: "#1cb0f6",
+    lineHeight: "1.75rem",
     overflow: "hidden",
-    paddingInline: 2,
-    color: "rgb(82, 82, 82)",
+
+    color: "#4b4b4b",
     ":hover": {
-      borderColor: "rgb(110, 110, 110)",
+      borderColor: "#e5e5e5",
     },
     ":active": {
-      borderColor: "rgb(110, 110, 110)",
+      borderColor: "#1cb0f6",
     },
-    ":focus": {
-      borderColor: "rgb(110, 110, 110)",
+    ":focus-within": {
+      borderColor: "#1cb0f6",
     },
   });
   let iconLeft = css({
-    width: 16,
+    color: "#afafaf",
     height: "100%",
     display: "flex",
     paddingInline: 5,
+    paddingLeft:6,
     alignItems: "center",
     justifyContent: "center",
     "&>svg": {
@@ -61,10 +63,14 @@
   const inputStyle = css({
     width: "100%",
     height: "100%",
+    paddingBlock: 9,
+    WebkitAppearance: "none",
     fontWeight: 600,
-    background:"transparent",
+    background: "transparent",
     color: "#525252",
     boxSizing: "border-box",
+        fontSize: "0.98rem",
+
     outline: "none",
     border: "none",
     "::placeholder": {
@@ -75,10 +81,21 @@
   const labelStyle = css({
     fontSize: 12,
     fontWeight: 600,
+    color:"#AFAFAF"
   });
   const fieldStyle = css({
     lineHeight: 1.5,
   });
+  const errorStyle = css({
+    color:'#ea2b2b',
+    fontWeight:600,
+    gap:2,
+    fontSize:13,
+    marginTop:3,
+    display:"flex",
+    alignItems:'center',
+    justifyContent:"start"
+  })
 </script>
 
 <div class={fieldStyle}>
@@ -90,5 +107,9 @@
       <UserIcon />
     </div>
     <input bind:value type="text" {name} class={inputStyle} {id} {...props} />
+  </div>
+  <div class={errorStyle}>
+  <svg height="16" preserveAspectRatio="xMidYMin slice" width="16" class="_1Tx0r" style="color: rgb(var(--color-fire-ant)); overflow: visible;" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8V13C11 13.5523 11.4477 14 12 14C12.5523 14 13 13.5523 13 13V8ZM12 17C12.5523 17 13 16.5523 13 16C13 15.4477 12.5523 15 12 15C11.4477 15 11 15.4477 11 16C11 16.5523 11.4477 17 12 17Z" fill="currentcolor"></path></svg>
+    <span>  Kata sandi terlalu pendek</span>
   </div>
 </div>

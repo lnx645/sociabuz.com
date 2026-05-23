@@ -1,0 +1,1 @@
+import{T as e,g as t,m as n}from"../js/mainDma9VV7j.js";var r=t(`<h1>About</h1> <p>This is another page</p>`,1);function i(t){var i=r();e(2),n(t,i)}export{i as default};
