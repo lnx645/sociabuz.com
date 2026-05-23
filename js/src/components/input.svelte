@@ -22,18 +22,18 @@
 
   const style = css({
     width: "100%",
-
+    borderRadius: 16,
     boxSizing: "border-box",
     borderColor: "#e5e5e5",
     borderWidth: 2,
     borderStyle: "solid",
     outline: "none",
+    height: 48,
     boxShadow: "rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset",
     transition: "0.5s ease",
     background: "#f7f7f7",
     display: "flex",
     alignItems: "center",
-    borderRadius: 12,
     caretColor: "#1cb0f6",
     lineHeight: "1.75rem",
     overflow: "hidden",
@@ -80,9 +80,9 @@
     flex: 1,
   });
   const labelStyle = css({
-    fontSize: 12,
-    fontWeight: 600,
-    color: "#525252",
+    fontSize: 14,
+    fontWeight: 800,
+    color: "#4b4b4b",
   });
   const fieldStyle = css({
     lineHeight: 1.5,

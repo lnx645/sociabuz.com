@@ -2,6 +2,8 @@
   import Button from "@/components/v2/button.svelte";
   import Input from "@/components/input.svelte";
   import { css } from "@emotion/css";
+  import FacebookIcon from "@/icons/facebook-icon.svelte";
+  import GoogleIcon from "@/icons/google-icon.svelte";
 
   const wrapper = css({
     maxWidth: 320,
@@ -40,6 +42,11 @@
       width: "100%",
     },
   });
+  const separator = css({
+    marginBlock: 8,
+    fontWeight: "bold",
+    color: "#afafaf",
+  });
 </script>
 
 <dir class={wrapper}>
@@ -56,8 +63,29 @@
       label="PASSWORD"
     />
     <div class={buttons}>
-      <Button>LOGIN</Button>
-      <Button>Login Dengan Google</Button>
+      <Button variant="success">LOGIN</Button>
+      <div class={separator}>
+        <span>ATAU</span>
+      </div>
+      <div
+        class={css({
+          display: "flex",
+          width: "100%",
+          gap: 10,
+          alignItems: "center",
+          justifyContent: "space-between",
+          flex: 1,
+        })}
+      >
+        <Button --size-height="47px" --text-color="#EA4335" variant="default">
+          <GoogleIcon />
+          <span>Google</span>
+        </Button>
+        <Button --size-height="47px" --text-color="#3b5998" variant="default">
+          <FacebookIcon />
+          <span>Facebook</span>
+        </Button>
+      </div>
     </div>
   </div>
 </dir>
