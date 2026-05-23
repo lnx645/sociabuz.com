@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
   import Button from "@/components/v2/button.svelte";
   import Input from "@/components/input.svelte";
   import { css } from "@emotion/css";
   import FacebookIcon from "@/icons/facebook-icon.svelte";
   import GoogleIcon from "@/icons/google-icon.svelte";
+  import Loader from "@/components/loader.svelte";
 
   const wrapper = css({
     maxWidth: 320,
@@ -47,6 +48,32 @@
     fontWeight: "bold",
     color: "#afafaf",
   });
+  const actionButtons = css({
+    display: "flex",
+    width: "100%",
+    gap: 10,
+    alignItems: "center",
+    justifyContent: "space-between",
+    flex: 1,
+  });
+
+  let data = $state<{
+    email: string;
+    password: string;
+  }>({
+    email: "",
+    password: "",
+  });
+
+  let loading = $state(false);
+
+  function login(e: SubmitEvent) {
+    e.preventDefault();
+    loading = true;
+    setTimeout(() => {
+      loading = false;
+    }, 1000);
+  }
 </script>
 
 <dir class={wrapper}>
@@ -54,38 +81,51 @@
     <h1>Silahkan Masuk</h1>
   </div>
 
-  <div class={fields}>
-    <Input placeholder="Masukan nama anda" name="password" label="EMAIL" />
+  <form action="" onsubmit={login} class={fields}>
     <Input
+      bind:value={data.email}
+      placeholder="Masukan nama anda"
+      name="password"
+      label="EMAIL"
+    />
+    <Input
+      bind:value={data.password}
       type="password"
       placeholder="Masukan kata sandi anda"
       name="email"
       label="PASSWORD"
     />
     <div class={buttons}>
-      <Button variant="success">LOGIN</Button>
+      <Button disabled={loading} variant="success">
+        {#if loading}
+          <Loader />
+        {:else}
+          Login
+        {/if}
+      </Button>
       <div class={separator}>
         <span>ATAU</span>
       </div>
-      <div
-        class={css({
-          display: "flex",
-          width: "100%",
-          gap: 10,
-          alignItems: "center",
-          justifyContent: "space-between",
-          flex: 1,
-        })}
-      >
-        <Button --size-height="47px" --text-color="#EA4335" variant="default">
+      <div class={actionButtons}>
+        <Button
+          disabled={loading}
+          --size-height="47px"
+          --text-color="#EA4335"
+          variant="default"
+        >
           <GoogleIcon />
           <span>Google</span>
         </Button>
-        <Button --size-height="47px" --text-color="#3b5998" variant="default">
+        <Button
+          disabled={loading}
+          --size-height="47px"
+          --text-color="#3b5998"
+          variant="default"
+        >
           <FacebookIcon />
           <span>Facebook</span>
         </Button>
       </div>
     </div>
-  </div>
+  </form>
 </dir>

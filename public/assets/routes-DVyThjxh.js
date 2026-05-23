@@ -1,0 +1,1 @@
+import{N as e,g as t,v as n}from"../js/mainBf_DO0be.js";var r=n(`<h1>Home</h1> <p>Check out the <a href="https://sv-router.vercel.app/guide/file-based/route-definition" target="_blank">documentation</a></p>`,1);function i(n){var i=r();e(2),t(n,i)}export{i as default};

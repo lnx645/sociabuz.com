@@ -4,11 +4,11 @@
   import { css } from "@emotion/css";
   import type { HTMLInputAttributes } from "svelte/elements";
   type InputProps = HTMLInputAttributes & {
-    value: string;
-    name: string;
-    id: string;
+    value?: string;
+    name?: string;
+    id?: string;
     label: string;
-    isError: boolean;
+    isError?: boolean;
   };
 
   let {

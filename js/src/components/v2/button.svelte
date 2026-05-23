@@ -2,6 +2,7 @@
   import { css, cx } from "@emotion/css";
   import { Button } from "bits-ui";
   import type { Snippet } from "svelte";
+  import Loader from "../loader.svelte";
 
   type ButtonVariant = "default" | "danger" | "warning" | "success" | "info";
 
@@ -9,8 +10,10 @@
     children,
     variant = "default",
     class: className,
+    disabled = false,
     ...props
   }: Button.RootProps & {
+    disabled?: boolean;
     children?: Snippet;
     variant?: ButtonVariant;
   } = $props();
@@ -130,6 +133,7 @@
 <Button.Root
   {...props}
   class={cx(baseStyles, variantStyles[variant], className as string)}
+  {disabled}
 >
   {@render children?.()}
 </Button.Root>

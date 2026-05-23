@@ -1,6 +1,6 @@
 {
-  "_emotion-css.esm-BsYPW9Xy.js": {
-    "file": "assets/emotion-css.esm-BsYPW9Xy.js",
+  "_emotion-css.esm-77t1yyu4.js": {
+    "file": "assets/emotion-css.esm-77t1yyu4.js",
     "name": "emotion-css.esm"
   },
   "node_modules/sv-router/src/helpers/validate-routes.js": {
@@ -10,7 +10,7 @@
     "isDynamicEntry": true
   },
   "src/main.ts": {
-    "file": "js/mainDma9VV7j.js",
+    "file": "js/mainBf_DO0be.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
@@ -27,7 +27,7 @@
     ]
   },
   "src/routes/about.svelte": {
-    "file": "assets/about-agx0vU9s.js",
+    "file": "assets/about-BsGB37te.js",
     "name": "about",
     "src": "src/routes/about.svelte",
     "isDynamicEntry": true,
@@ -36,7 +36,7 @@
     ]
   },
   "src/routes/auth/layout.svelte": {
-    "file": "assets/layout-DpPKiquL.js",
+    "file": "assets/layout-DH6wFG3D.js",
     "name": "layout",
     "src": "src/routes/auth/layout.svelte",
     "isDynamicEntry": true,
@@ -45,17 +45,20 @@
     ]
   },
   "src/routes/auth/login.svelte": {
-    "file": "assets/login-BbJ9ifZ8.js",
+    "file": "assets/login-D-qfL76I.js",
     "name": "login",
     "src": "src/routes/auth/login.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts",
-      "_emotion-css.esm-BsYPW9Xy.js"
+      "_emotion-css.esm-77t1yyu4.js"
+    ],
+    "css": [
+      "css/app2.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "assets/routes-D0F1IYiQ.js",
+    "file": "assets/routes-DVyThjxh.js",
     "name": "routes",
     "src": "src/routes/index.svelte",
     "isDynamicEntry": true,
@@ -64,13 +67,13 @@
     ]
   },
   "src/routes/layout.svelte": {
-    "file": "assets/layout-cYwxSSUf.js",
+    "file": "assets/layout-B8krmgN1.js",
     "name": "layout",
     "src": "src/routes/layout.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts",
-      "_emotion-css.esm-BsYPW9Xy.js"
+      "_emotion-css.esm-77t1yyu4.js"
     ]
   }
 }
