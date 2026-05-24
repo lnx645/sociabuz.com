@@ -47,9 +47,9 @@
     MozOsxFontSmoothing: "grayscale",
 
     "&:disabled": {
-      color: "rgb(175, 175, 175)",
+      color: "#afafaf",
       "&:before": {
-        background: "rgb(229, 229, 229)",
+        background: "#e5e5e5",
         boxShadow: "none",
         borderColor: "transparent",
       },
