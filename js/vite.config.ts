@@ -5,7 +5,11 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   server : {
-    cors:true
+    cors:true,
+    headers : {
+      'Cross-Origin-Resource-Policy': 'cross-origin',
+      "access-control-allow-origin":"*"
+    }
   },
   plugins: [svelte({
     preprocess:vitePreprocess()

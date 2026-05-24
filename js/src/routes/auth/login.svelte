@@ -5,57 +5,9 @@
   import FacebookIcon from "@/icons/facebook-icon.svelte";
   import GoogleIcon from "@/icons/google-icon.svelte";
   import Loader from "@/components/loader.svelte";
-
-  const wrapper = css({
-    maxWidth: 320,
-    margin: "auto",
-    color: "#4b4b4b",
-    h1: {
-      fontSize: 24,
-      padding: 0,
-      margin: 0,
-    },
-    p: {
-      fontSize: 12,
-    },
-  });
-  const fields = css({
-    display: "flex",
-    flexDirection: "column",
-    gap: 12,
-  });
-  const header = css({
-    marginBlock: 24,
-    marginBottom: 10,
-    textAlign: "center",
-    h1: {
-      fontWeight: 600,
-      fontSize: 24,
-    },
-  });
-  const buttons = css({
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    boxSizing: "border-box",
-    gap: 10,
-    button: {
-      width: "100%",
-    },
-  });
-  const separator = css({
-    marginBlock: 8,
-    fontWeight: "bold",
-    color: "#afafaf",
-  });
-  const actionButtons = css({
-    display: "flex",
-    width: "100%",
-    gap: 10,
-    alignItems: "center",
-    justifyContent: "space-between",
-    flex: 1,
-  });
+  import IconPassword from "@/icons/icon-password.svelte";
+  import { navigate } from "sv-router/generated";
+  import { loginFormStyled } from "@/styled/login";
 
   let data = $state<{
     email: string;
@@ -72,16 +24,17 @@
     loading = true;
     setTimeout(() => {
       loading = false;
+      navigate("/manage");
     }, 1000);
   }
 </script>
 
-<dir class={wrapper}>
-  <div class={header}>
+<dir class={loginFormStyled.wrapper}>
+  <div class={loginFormStyled.header}>
     <h1>Silahkan Masuk</h1>
   </div>
 
-  <form action="" onsubmit={login} class={fields}>
+  <form action="" onsubmit={login} class={loginFormStyled.fields}>
     <Input
       bind:value={data.email}
       placeholder="Masukan nama anda"
@@ -95,7 +48,7 @@
       name="email"
       label="PASSWORD"
     />
-    <div class={buttons}>
+    <div class={loginFormStyled.buttons}>
       <Button disabled={loading} variant="success">
         {#if loading}
           <Loader />
@@ -103,10 +56,10 @@
           Login
         {/if}
       </Button>
-      <div class={separator}>
+      <div class={loginFormStyled.separator}>
         <span>ATAU</span>
       </div>
-      <div class={actionButtons}>
+      <div class={loginFormStyled.actionButtons}>
         <Button
           disabled={loading}
           --size-height="47px"

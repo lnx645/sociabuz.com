@@ -37,6 +37,10 @@ func InitHTTPServer(cfg *ServerConfig) ServerApp {
 	app.Use(cors.New(cors.Config{
 		AllowOrigins: []string{"*"},
 	}))
+	app.Use(func(c fiber.Ctx) error {
+		c.Set("Cross-Origin-Resource-Policy", "cross-origin")
+		return c.Next()
+	})
 	app.Use(requestid.New())
 	app.Use(logger.New())
 	app.Use(helmet.New())

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { useId } from "@/core/utils";
-  import UserIcon from "@/icons/user-icon.svelte";
   import { css } from "@emotion/css";
+  import type { Snippet } from "svelte";
   import type { HTMLInputAttributes } from "svelte/elements";
   type InputProps = HTMLInputAttributes & {
     value?: string;
@@ -9,6 +9,7 @@
     id?: string;
     label: string;
     isError?: boolean;
+    prefix?: Snippet;
   };
 
   let {
@@ -17,8 +18,11 @@
     id = useId(),
     value = $bindable(),
     name,
+    prefix,
     ...props
   }: InputProps = $props();
+
+  let isPrefix = $derived(!!prefix);
 
   const style = css({
     width: "100%",
@@ -50,7 +54,7 @@
     },
   });
   let iconLeft = css({
-    color: "#afafaf",
+    color: "#4b4b4b",
     height: "100%",
     display: "flex",
     paddingInline: 5,
@@ -62,23 +66,25 @@
       height: 24,
     },
   });
-  const inputStyle = css({
-    width: "100%",
-    height: "100%",
-    paddingBlock: 9,
-    WebkitAppearance: "none",
-    fontWeight: 600,
-    background: "transparent",
-    color: "#525252",
-    boxSizing: "border-box",
-    fontSize: "0.98rem",
-    outline: "none",
-    border: "none",
-    "::placeholder": {
-      color: "#525252",
-    },
-    flex: 1,
-  });
+  const inputStyle = () =>
+    css({
+      width: "100%",
+      height: "100%",
+      paddingBlock: 9,
+      paddingLeft: !isPrefix ? 13 : 0,
+      WebkitAppearance: "none",
+      fontWeight: 600,
+      background: "transparent",
+      color: "#4b4b4b",
+      boxSizing: "border-box",
+      fontSize: "0.98rem",
+      outline: "none",
+      border: "none",
+      "::placeholder": {
+        color: "#4b4b4b",
+      },
+      flex: 1,
+    });
   const labelStyle = css({
     fontSize: 14,
     fontWeight: 800,
@@ -104,10 +110,12 @@
     {label}
   </label>
   <div class={style}>
-    <div class={iconLeft}>
-      <UserIcon />
-    </div>
-    <input bind:value type="text" {name} class={inputStyle} {id} {...props} />
+    {#if prefix}
+      <div class={iconLeft}>
+        {@render prefix()}
+      </div>
+    {/if}
+    <input bind:value type="text" {name} class={inputStyle()} {id} {...props} />
   </div>
   {#if isError}
     <div class={errorStyle}>
