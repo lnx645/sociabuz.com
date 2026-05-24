@@ -1,0 +1,1 @@
+import{F as e,I as t,T as n,_ as r,p as i,y as a}from"../js/mainBxedhovN.js";var o=a(`<div><!></div>`);function s(a,s){var c=o();i(n(c),()=>s.children??t),e(c),r(a,c)}export{s as default};

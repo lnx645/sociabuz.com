@@ -1,0 +1,1 @@
+import{_ as e,y as t}from"../js/mainBxedhovN.js";var n=t(`<h2>Manage Bos</h2>`);function r(t){e(t,n())}export{r as default};

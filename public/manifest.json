@@ -3,6 +3,10 @@
     "file": "assets/emotion-css.esm-77t1yyu4.js",
     "name": "emotion-css.esm"
   },
+  "_utils-CRkhyN0I.js": {
+    "file": "assets/utils-CRkhyN0I.js",
+    "name": "utils"
+  },
   "node_modules/sv-router/src/helpers/validate-routes.js": {
     "file": "assets/validate-routes-CgbRa8fT.js",
     "name": "validate-routes",
@@ -10,7 +14,7 @@
     "isDynamicEntry": true
   },
   "src/main.ts": {
-    "file": "js/mainBf_DO0be.js",
+    "file": "js/mainBxedhovN.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
@@ -20,14 +24,16 @@
       "src/routes/auth/layout.svelte",
       "src/routes/auth/login.svelte",
       "src/routes/index.svelte",
-      "src/routes/layout.svelte"
+      "src/routes/layout.svelte",
+      "src/routes/manage/index.svelte",
+      "src/routes/manage/layout.svelte"
     ],
     "css": [
       "css/app.css"
     ]
   },
   "src/routes/about.svelte": {
-    "file": "assets/about-BsGB37te.js",
+    "file": "assets/about-DKB98_KM.js",
     "name": "about",
     "src": "src/routes/about.svelte",
     "isDynamicEntry": true,
@@ -36,7 +42,7 @@
     ]
   },
   "src/routes/auth/layout.svelte": {
-    "file": "assets/layout-DH6wFG3D.js",
+    "file": "assets/layout-IEbIQ0gN.js",
     "name": "layout",
     "src": "src/routes/auth/layout.svelte",
     "isDynamicEntry": true,
@@ -45,20 +51,21 @@
     ]
   },
   "src/routes/auth/login.svelte": {
-    "file": "assets/login-D-qfL76I.js",
+    "file": "assets/login-aiynYY4L.js",
     "name": "login",
     "src": "src/routes/auth/login.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts",
-      "_emotion-css.esm-77t1yyu4.js"
+      "_emotion-css.esm-77t1yyu4.js",
+      "_utils-CRkhyN0I.js"
     ],
     "css": [
       "css/app2.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "assets/routes-DVyThjxh.js",
+    "file": "assets/routes-CZQOfVwn.js",
     "name": "routes",
     "src": "src/routes/index.svelte",
     "isDynamicEntry": true,
@@ -67,13 +74,33 @@
     ]
   },
   "src/routes/layout.svelte": {
-    "file": "assets/layout-B8krmgN1.js",
+    "file": "assets/layout-5ldFKc3q.js",
     "name": "layout",
     "src": "src/routes/layout.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts",
       "_emotion-css.esm-77t1yyu4.js"
+    ]
+  },
+  "src/routes/manage/index.svelte": {
+    "file": "assets/manage-CzxPfqm2.js",
+    "name": "manage",
+    "src": "src/routes/manage/index.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/routes/manage/layout.svelte": {
+    "file": "assets/layout-BXHLbDhF.js",
+    "name": "layout",
+    "src": "src/routes/manage/layout.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts",
+      "_emotion-css.esm-77t1yyu4.js",
+      "_utils-CRkhyN0I.js"
     ]
   }
 }

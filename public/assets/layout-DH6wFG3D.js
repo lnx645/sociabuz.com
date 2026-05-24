@@ -1,1 +1,0 @@
-import{F as e,P as t,f as n,g as r,v as i,w as a}from"../js/mainBf_DO0be.js";var o=i(`<div><!></div>`);function s(i,s){var c=o();n(a(c),()=>s.children??e),t(c),r(i,c)}export{s as default};

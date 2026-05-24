@@ -1,0 +1,1 @@
+import{P as e,_ as t,y as n}from"../js/mainBxedhovN.js";var r=n(`<h1>About</h1> <p>This is another page</p>`,1);function i(n){var i=r();e(2),t(n,i)}export{i as default};
