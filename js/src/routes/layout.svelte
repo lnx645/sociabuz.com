@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { InitializeScreenSize } from "@/core/device-detection.svelte";
   import { injectGlobal } from "@emotion/css";
+  import { onMount } from "svelte";
 
   let { children } = $props();
   injectGlobal({
@@ -17,6 +19,9 @@
       display: "contents",
     },
   });
+  onMount(()=>{
+    InitializeScreenSize()
+  })
 </script>
 
 <div>

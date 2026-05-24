@@ -1,23 +1,20 @@
 <script lang="ts">
+  import ManageDashboardNavbar from "@/components/nav/manage-dashboard-navbar.svelte";
   import NavLink from "@/components/sidebar/nav-item.svelte";
+  import screenSize from "@/core/device-detection.svelte";
   import { mq } from "@/core/utils";
   import DuolingoIcon from "@/icons/duolingo-icon.svelte";
   import FeaturesIcon from "@/icons/features-icon.svelte";
-  import IconHeart from "@/icons/icon-heart.svelte";
   import IconHome from "@/icons/icon-home.svelte";
-  import IconMenu from "@/icons/icon-menu.svelte";
   import ListIcon from "@/icons/list-icon.svelte";
   import MoreIcon from "@/icons/more-icon.svelte";
-  import StoreIcon from "@/icons/store-icon.svelte";
-  import { css } from "@emotion/css";
+  import { css, cx } from "@emotion/css";
 
   let { children } = $props();
-
   const layoutManage = {
     wrapper: css(
       mq({
-        display: "grid",
-        gridTemplateColumns: ["1fr", "256px 1fr"],
+        display: "flex",
         minHeight: "100vh",
       }),
     ),
@@ -30,12 +27,20 @@
       }),
       wrapper: css(
         mq({
+          maxWidth: 260,
+          minWidth: 260,
           borderRight: "2px solid",
           borderColor: "#e5e5e5",
-          display: ["none", "block"],
+          height: "100vh",
+          top:["56px",0],
+          display: ["block"],
+          position: ["fixed", "relative"],
+          background: "white",
+          zIndex: 99,
         }),
       ),
-      brand: css({
+      brand: css(mq({
+        display:["none","inline-block"],
         paddingTop: 24,
         paddingInline: 10,
         paddingBottom: 5,
@@ -43,55 +48,55 @@
         svg: {
           width: "50%",
         },
-      }),
+      })),
     },
     main: css({
-      flex: 1,
-      display: "grid",
-      gridTemplateColumns: "1fr",
+      width: "100%",
     }),
   };
+  let isSidebarOpen = $state(false);
+
+  let isOpen = $derived.by(() => {
+    return (
+      (isSidebarOpen && screenSize.isMobile) ||
+      screenSize.isTablet ||
+      screenSize.isDekstop
+    );
+  });
 </script>
 
-<div class={layoutManage.wrapper}>
-  <aside class={layoutManage.sidebar.wrapper}>
-    <div class={layoutManage.sidebar.brand}>
-      <DuolingoIcon />
-    </div>
-    <div class={layoutManage.sidebar.menu}>
-      <NavLink
-        isActive={true}
-        title="PROFILE"
-        description="@dadanhdyt - creator"
-        icon={IconHome}
-      />
-      <NavLink
-        title="TRANSAKSI"
-        description="Kelola transaksi"
-        icon={ListIcon}
-      />
-      <NavLink
-        title="FEATURES"
-        description="Overlay,SondBoard,dll"
-        icon={FeaturesIcon}
-      />
-      <NavLink title="MORE" icon={MoreIcon} />
-    </div>
-  </aside>
+<div class={cx(layoutManage.wrapper)}>
+  {#if isOpen}
+    <aside class={layoutManage.sidebar.wrapper}>
+      <div class={layoutManage.sidebar.brand}>
+        <DuolingoIcon />
+      </div>
+      <div class={layoutManage.sidebar.menu}>
+        <NavLink
+          isActive={true}
+          title="PROFILE"
+          description="@dadanhdyt - creator"
+          icon={IconHome}
+        />
+        <NavLink
+          title="TRANSAKSI"
+          description="Kelola transaksi"
+          icon={ListIcon}
+        />
+        <NavLink
+          title="FEATURES"
+          description="Overlay,SondBoard,dll"
+          icon={FeaturesIcon}
+        />
+        <NavLink title="MORE" icon={MoreIcon} />
+      </div>
+    </aside>
+  {/if}
   <main class={layoutManage.main}>
-    <nav
-      class={css(
-        mq({
-          height: 56,
-          borderBottom: "2px solid var(--color-disabled)",
-          display: ["flex", "none"],
-          alignItems: "center",
-          paddingInline: 10,
-        }),
-      )}
-    >
-      <IconMenu />
-    </nav>
+    {#if !screenSize.isDekstop}
+      <ManageDashboardNavbar bind:isMenuToggle={isSidebarOpen} />
+    {/if}
+    {isOpen}
     {@render children?.()}
   </main>
 </div>
