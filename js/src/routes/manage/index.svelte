@@ -1,5 +1,8 @@
 <script lang="ts">
-  import { css } from "@emotion/css";
+  import LinkIcon from "@/icons/link-icon.svelte";
+  import { css, cx } from "@emotion/css";
+  import { card, flexbox, fontSize, typography } from "@/styled";
+  import colors from "@/styled/colors";
 </script>
 
 <img
@@ -12,17 +15,28 @@
     padding: 10,
   })}
 >
-  <div
-    class={css({
-      borderRadius: 10,
-      padding: 10,
-      fontSize:15,
-      textTransform:"uppercase",
-      fontWeight:"bold",
-      color:"var(--color-text)",
-      border: "2px solid var(--color-disabled)",
-    })}
-  >
-    Sertifikasi bahasa Inggris Anda dan akses 6.000+ institusi di seluruh dunia
+  <div class={card.wrapper}>
+    <div class={card.content}>
+      <div
+        class={cx(
+          flexbox.flex,
+          typography.fontBold,
+          flexbox.alignItemsCenter,
+          flexbox.gapXS,
+        )}
+      >
+        <LinkIcon />
+        <span>Link Halaman Kamu</span>
+      </div>
+      <a
+        class={cx(
+          typography.underline,
+          typography.fontSemiBold,
+          colors.primary,
+          fontSize.textXs,
+        )}
+        href="https://sobuzz.id/dadanhdyt">https://sobuzz.id/dadanhdyt</a
+      >
+    </div>
   </div>
 </div>
