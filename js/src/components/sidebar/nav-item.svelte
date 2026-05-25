@@ -63,9 +63,11 @@
     title: css({
       textTransform: "uppercase",
       fontWeight: 800,
+      fontSize:15,
     }),
     description: css({
-      fontSize: 12,
+      fontSize: 10,
+      fontWeight:600
     }),
   };
 </script>

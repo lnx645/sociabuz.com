@@ -1,11 +1,21 @@
 {
+  "_device-detection.svelte-DzgUzAEa.js": {
+    "file": "assets/device-detection.svelte-DzgUzAEa.js",
+    "name": "device-detection.svelte",
+    "imports": [
+      "src/main.ts"
+    ]
+  },
   "_emotion-css.esm-77t1yyu4.js": {
     "file": "assets/emotion-css.esm-77t1yyu4.js",
     "name": "emotion-css.esm"
   },
-  "_utils-CRkhyN0I.js": {
-    "file": "assets/utils-CRkhyN0I.js",
-    "name": "utils"
+  "_utils-i0zL1O0y.js": {
+    "file": "assets/utils-i0zL1O0y.js",
+    "name": "utils",
+    "imports": [
+      "src/main.ts"
+    ]
   },
   "node_modules/sv-router/src/helpers/validate-routes.js": {
     "file": "assets/validate-routes-CgbRa8fT.js",
@@ -14,7 +24,7 @@
     "isDynamicEntry": true
   },
   "src/main.ts": {
-    "file": "js/mainBxedhovN.js",
+    "file": "js/mainB1sZEUk1.js",
     "name": "main",
     "src": "src/main.ts",
     "isEntry": true,
@@ -33,7 +43,7 @@
     ]
   },
   "src/routes/about.svelte": {
-    "file": "assets/about-DKB98_KM.js",
+    "file": "assets/about-Dr971Cbc.js",
     "name": "about",
     "src": "src/routes/about.svelte",
     "isDynamicEntry": true,
@@ -42,7 +52,7 @@
     ]
   },
   "src/routes/auth/layout.svelte": {
-    "file": "assets/layout-IEbIQ0gN.js",
+    "file": "assets/layout-jSEaQDp8.js",
     "name": "layout",
     "src": "src/routes/auth/layout.svelte",
     "isDynamicEntry": true,
@@ -51,21 +61,21 @@
     ]
   },
   "src/routes/auth/login.svelte": {
-    "file": "assets/login-aiynYY4L.js",
+    "file": "assets/login-BZyKLJ-a.js",
     "name": "login",
     "src": "src/routes/auth/login.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts",
       "_emotion-css.esm-77t1yyu4.js",
-      "_utils-CRkhyN0I.js"
+      "_utils-i0zL1O0y.js"
     ],
     "css": [
       "css/app2.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "assets/routes-CZQOfVwn.js",
+    "file": "assets/routes-CC1r_pZq.js",
     "name": "routes",
     "src": "src/routes/index.svelte",
     "isDynamicEntry": true,
@@ -74,33 +84,36 @@
     ]
   },
   "src/routes/layout.svelte": {
-    "file": "assets/layout-5ldFKc3q.js",
+    "file": "assets/layout-fBVkZTle.js",
     "name": "layout",
     "src": "src/routes/layout.svelte",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts",
+      "_emotion-css.esm-77t1yyu4.js",
+      "_device-detection.svelte-DzgUzAEa.js"
+    ]
+  },
+  "src/routes/manage/index.svelte": {
+    "file": "assets/manage-CZ6ERMyH.js",
+    "name": "manage",
+    "src": "src/routes/manage/index.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts",
       "_emotion-css.esm-77t1yyu4.js"
     ]
   },
-  "src/routes/manage/index.svelte": {
-    "file": "assets/manage-CzxPfqm2.js",
-    "name": "manage",
-    "src": "src/routes/manage/index.svelte",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/main.ts"
-    ]
-  },
   "src/routes/manage/layout.svelte": {
-    "file": "assets/layout-BXHLbDhF.js",
+    "file": "assets/layout-BxdYQF7K.js",
     "name": "layout",
     "src": "src/routes/manage/layout.svelte",
     "isDynamicEntry": true,
     "imports": [
       "src/main.ts",
       "_emotion-css.esm-77t1yyu4.js",
-      "_utils-CRkhyN0I.js"
+      "_utils-i0zL1O0y.js",
+      "_device-detection.svelte-DzgUzAEa.js"
     ]
   }
 }

@@ -1,0 +1,1 @@
+import{L as e,M as t}from"../js/mainB1sZEUk1.js";var n=e({isMobile:!1,isTablet:!1,isDekstop:!1}),r={sm:576,md:768,lg:992,xl:1200};function i(){let e=window.innerWidth;n.isMobile=e<=r.sm,n.isTablet=e>r.sm&&e<=r.md,n.isDekstop=e>r.md}function a(){t(()=>(i(),window.addEventListener(`resize`,i),()=>{window.removeEventListener(`resize`,i)}))}export{n,a as t};

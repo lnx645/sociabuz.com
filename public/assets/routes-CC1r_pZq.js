@@ -1,0 +1,1 @@
+import{q as e,x as t,y as n}from"../js/mainB1sZEUk1.js";var r=t(`<h1>Home</h1> <p>Check out the <a href="https://sv-router.vercel.app/guide/file-based/route-definition" target="_blank">documentation</a></p>`,1);function i(t){var i=r();e(2),n(t,i)}export{i as default};

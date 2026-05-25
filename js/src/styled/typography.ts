@@ -9,9 +9,13 @@ const fontSemiBold = css({ fontWeight: 600 });
 const fontNormal = css({ fontWeight: "normal" });
 
 const textSm = css({ fontSize: "12px" });
+const textMd = css({ fontSize: "14px" });
 const textBase = css({ fontSize: "16px" });
 const textLg = css({ fontSize: "20px" });
 const textXl = css({ fontSize: "24px" });
+const uppercase = css({
+    textTransform:"uppercase"
+})
 const underline = css({
   textDecoration: "underline",
 });
@@ -27,8 +31,10 @@ const typography = {
   textCenter,
   underline,
   noUnderline,
+  uppercase,
   lineThrough,
   textLeft,
+  textMd,
   textRight,
   fontBold,
   fontSemiBold,

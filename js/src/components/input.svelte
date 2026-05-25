@@ -1,12 +1,13 @@
 <script lang="ts">
   import { useId } from "@/core/utils";
-  import { css } from "@emotion/css";
+  import { css, cx } from "@emotion/css";
   import type { Snippet } from "svelte";
   import type { HTMLInputAttributes } from "svelte/elements";
   type InputProps = HTMLInputAttributes & {
     value?: string;
     name?: string;
     id?: string;
+    size?: any;
     label: string;
     isError?: boolean;
     prefix?: Snippet;
@@ -18,6 +19,7 @@
     id = useId(),
     value = $bindable(),
     name,
+    size,
     prefix,
     ...props
   }: InputProps = $props();
@@ -109,7 +111,14 @@
   <label class={labelStyle} for={id}>
     {label}
   </label>
-  <div class={style}>
+  <div
+    class={cx(
+      style,
+      css({
+        height: size == "sm" ? 40 : size == "md" ? 32 : size == "lg" ? 48 : 48,
+      }),
+    )}
+  >
     {#if prefix}
       <div class={iconLeft}>
         {@render prefix()}
