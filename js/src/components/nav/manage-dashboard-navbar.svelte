@@ -11,6 +11,11 @@
       paddingInline: 10,
     }),
   );
+  let right = css(
+    mq({
+      marginLeft: "auto",
+    }),
+  );
 </script>
 
 <script lang="ts">
@@ -18,7 +23,7 @@
   import CloseIcon from "@/icons/close-icon.svelte";
   import IconMenu from "@/icons/icon-menu.svelte";
   import { css } from "@emotion/css";
-  import { Button } from "bits-ui";
+  import { Avatar, Button } from "bits-ui";
 
   let {
     isMenuToggle = $bindable(),
@@ -39,4 +44,9 @@
       <IconMenu />
     {/if}
   </Button.Root>
+  <div class={right}>
+    <Avatar.Root>
+      <Avatar.Fallback>D</Avatar.Fallback>
+    </Avatar.Root>
+  </div>
 </nav>

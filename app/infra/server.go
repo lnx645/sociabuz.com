@@ -38,7 +38,9 @@ func InitHTTPServer(cfg *ServerConfig) ServerApp {
 		AllowOrigins: []string{"*"},
 	}))
 	app.Use(func(c fiber.Ctx) error {
+		c.Set("Cross-Origin-Embedder-Policy", "credentialless")
 		c.Set("Cross-Origin-Resource-Policy", "cross-origin")
+		c.Set("Access-Control-Allow-Origin", "*")
 		return c.Next()
 	})
 	app.Use(requestid.New())
